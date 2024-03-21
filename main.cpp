@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ZakariaElbouzkri <elbouzkri9@gmail.com>    +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 06:47:22 by ZakariaElbo       #+#    #+#             */
-/*   Updated: 2024/03/21 19:33:05 by ZakariaElbo      ###   ########.fr       */
+/*   Updated: 2024/03/21 21:45:23 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "IMonitor.hpp"
-#include "Poller.hpp"
-#include "Selector.hpp"
-#include "Epoller.hpp"
+#include "monitors.hpp"
 #include <unistd.h>
 #include <cstring>
 #include <sys/socket.h>
@@ -25,7 +22,7 @@
 
 int main()
 {
-	IMonitor*	monitor = new Epoller();
+	IMonitor*	monitor = new Poller();
 	int sock = socket(AF_INET, SOCK_STREAM, 0);
 	if (sock == -1)
 		return 1;
