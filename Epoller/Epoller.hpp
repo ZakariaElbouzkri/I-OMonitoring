@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Epoller.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ZakariaElbouzkri <elbouzkri9@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 17:47:39 by ZakariaElbo       #+#    #+#             */
-/*   Updated: 2024/03/21 21:41:51 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2024/03/22 05:24:56 by ZakariaElbo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	Epoller : public IMonitor
 		int		_epollfd;
 		std::unordered_set<int>	_readable_fds;	
 		std::unordered_set<int>	_writeable_fds;
-		struct epoll_event*		_events;
+		struct epoll_event		_events[MAX_EVENTS];
 	public:
 		Epoller( void );
 		virtual ~Epoller( void );

@@ -6,7 +6,7 @@
 /*   By: ZakariaElbouzkri <elbouzkri9@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:03:16 by ZakariaElbo       #+#    #+#             */
-/*   Updated: 2024/03/21 19:32:25 by ZakariaElbo      ###   ########.fr       */
+/*   Updated: 2024/03/22 05:24:40 by ZakariaElbo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,10 @@ Epoller::Epoller( void )
 	if (_epollfd == -1) {
 		throw std::runtime_error("Failed to create epoll instance");
 	}
-	_events = new epoll_event[MAX_EVENTS];
 }
 
 Epoller::~Epoller( void )
 {
-	delete [] _events;
 	close(_epollfd);	
 }
 
