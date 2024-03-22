@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   KQueuer.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ZakariaElbouzkri <elbouzkri9@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:47:55 by zel-bouz          #+#    #+#             */
-/*   Updated: 2024/03/21 21:41:41 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2024/03/22 05:24:16 by ZakariaElbo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <unistd.h>
 #include <unordered_map>
 
-#define MAX_EVENTS 1024
+#define MAX_EVENTS 1024 // adjust the size as needed
 
 class KQueuer : public IMonitor
 {
