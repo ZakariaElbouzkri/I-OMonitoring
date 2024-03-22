@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   monitors.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ZakariaElbouzkri <elbouzkri9@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 21:38:27 by zel-bouz          #+#    #+#             */
-/*   Updated: 2024/03/21 21:41:13 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2024/03/22 05:09:40 by ZakariaElbo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,3 @@
 #else
     #include "Epoller/Epoller.hpp"
 #endif
-
-

@@ -1,12 +1,12 @@
 NAME      = main
-CC        = c++ -std=c++98
+CC        = c++ -std=c++11
 FLAGS     = -Wall -Wextra -Werror
 RM        = rm -fr
 OBJDIR    = .obj
-FILES     = Epoller/Epoller KQueuer/KQueuer main Poller/Poller Selector/Selector
+FILES     = main Poller/Poller KQueuer/KQueuer Epoller/Epoller Selector/Selector
 SRC       = $(FILES:=.cpp)
 OBJ       = $(addprefix $(OBJDIR)/, $(FILES:=.o))
-INCLUEDES = Epoller/Epoller.hpp IMonitor/IMonitor.hpp KQueuer/KQueuer.hpp monitors.hpp Poller/Poller.hpp Selector/Selector.hpp
+INCLUEDES = Poller/Poller.hpp KQueuer/KQueuer.hpp Epoller/Epoller.hpp monitors.hpp IMonitor/IMonitor.hpp Selector/Selector.hpp
 
 all: $(NAME)
 
