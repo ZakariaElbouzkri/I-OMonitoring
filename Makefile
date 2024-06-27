@@ -1,9 +1,10 @@
-NAME      = main
+NAME      = lib.a
 CC        = c++ -std=c++11
 FLAGS     = -Wall -Wextra -Werror
 RM        = rm -fr
+AR		  = ar rc
 OBJDIR    = .obj
-FILES     = main Poller/Poller KQueuer/KQueuer Epoller/Epoller Selector/Selector
+FILES     = Poller/Poller KQueuer/KQueuer Epoller/Epoller Selector/Selector
 SRC       = $(FILES:=.cpp)
 OBJ       = $(addprefix $(OBJDIR)/, $(FILES:=.o))
 INCLUEDES = Poller/Poller.hpp KQueuer/KQueuer.hpp Epoller/Epoller.hpp monitors.hpp IMonitor/IMonitor.hpp Selector/Selector.hpp
@@ -11,7 +12,7 @@ INCLUEDES = Poller/Poller.hpp KQueuer/KQueuer.hpp Epoller/Epoller.hpp monitors.h
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(AR) $@ $^
 
 $(OBJDIR)/%.o: %.cpp $(INCLUEDES)
 	mkdir -p $(dir $@)
